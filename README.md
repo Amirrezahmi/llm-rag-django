@@ -51,7 +51,7 @@
 
 ### ۱. دریافت کد
 ```bash
-git clone <repository-url>
+git clone https://github.com/Amirrezahmi/llm-rag-django.git
 cd llm-rag-django
 ```
 

@@ -1,0 +1,15 @@
+services:
+  web:
+    build:
+      context: .
+      network: host
+    network_mode: host
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+      - ./media:/app/media
+      - ./chroma_db:/app/chroma_db
+    env_file:
+      - .env
